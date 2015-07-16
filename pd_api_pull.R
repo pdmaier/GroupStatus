@@ -2,7 +2,7 @@ pd_api_pull <- function()
 {
 	library(httr)
 
-	api_url <- "https://api.pipedrive.com/v1/deals?filter_id=45&start=0&limit=500&api_token=ef9fe7b9f8ba78e0d16b992f1fd76dd81072496a"
+	api_url <- "https://api.pipedrive.com/v1/deals?filter_id=45&start=0&limit=500&api_token=ANON"
 
 	raw_data <- GET(api_url)
 
@@ -14,7 +14,7 @@ pd_api_pull <- function()
 
 	json3 <- json2$data
 
-	group_id <- "e49f2426ff1db25271baae466cbc7a6bff20e42b"
+	group_id <- "ANON"
 
 	group_to_name_and_school <- cbind(json3$e49f2426ff1db25271baae466cbc7a6bff20e42b, json3$person_id$name, json3$org_name)
 
